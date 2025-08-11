@@ -81,7 +81,7 @@ Example:
 #define HEADER_NAME
 // header content
 #endif
-
+```
 In this project I chose to use #pragma once because it’s shorter, less prone to mistakes, and can be a bit more efficient — the compiler can quickly skip reading the file again if it already handled it earlier. I also added the classic #ifndef / #define / #endif guards I learned in school, so I could try both methods and compare them.
 
 ---
