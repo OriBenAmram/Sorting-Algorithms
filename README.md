@@ -42,7 +42,18 @@ This repository gathers the implementations of these algorithms in three program
 
 ---
 
-*(More algorithms will be added each day.)*
+### 4. Merge Sort
+**How it works:** Recursively divides the array into halves until each subarray has one element, then merges the subarrays back together in sorted order using a helper merge function.
+
+**Time Complexity:** 
+
+Best: O(n log n)
+
+Average: O(n log n)
+
+Worst: O(n log n)
+**Space Complexity:** O(n) (due to temporary arrays for merging)
+The time complexity is O(n log n) in all cases because the array is repeatedly divided into halves (log n splits) and each merge operation takes O(n) time.
 
 ---
 
@@ -51,6 +62,14 @@ This repository gathers the implementations of these algorithms in three program
 ### **C – `#pragma once`**
 Ensures the header file is included only once during compilation, preventing multiple-definition errors.  
 Shorter and less error-prone than traditional `#ifndef / #define / #endif` include guards.
+
+---
+
+### **C / C++ – Internal Linkage for Private Helpers**
+In C, declaring a function as `static` at the top level of a `.c` file gives it **internal linkage** — it can only be used within that file. This is useful for keeping helper functions private to an implementation, preventing name clashes, and keeping the public API clean.  
+In C++, the same effect can be achieved with `static` or by placing the helper function inside an **anonymous namespace**. Anything in an anonymous namespace is visible only in that `.cpp` file.  
+In this project, for example, the `merge` function in `merge.c` is `static`, and in C++ implementations some helpers are placed in an anonymous namespace for the same reason.
+
 
 ---
 
@@ -64,3 +83,5 @@ Example:
 #endif
 
 In this project I chose to use #pragma once because it’s shorter, less prone to mistakes, and can be a bit more efficient — the compiler can quickly skip reading the file again if it already handled it earlier. I also added the classic #ifndef / #define / #endif guards I learned in school, so I could try both methods and compare them.
+
+---

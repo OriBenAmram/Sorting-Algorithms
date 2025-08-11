@@ -4,6 +4,7 @@
 #include "algorithms/bubble.hpp"
 #include "algorithms/selection.hpp"
 #include "algorithms/insertion.hpp"
+#include "algorithms/merge.hpp"
 
 int main() {
     std::vector<int> a1 = {64, 34, 25, 12, 22, 11, 90};
@@ -23,6 +24,12 @@ int main() {
     print_array(a3);
     insertion_sort(a3);
     print_array(a3);
+
+    std::vector<int> a4 = {64, 34, 25, 12, 22, 11, 90};
+    std::cout << "\nMerge sort:\n";
+    print_array(a4);
+    merge_sort(a4);
+    print_array(a4);
 
     return 0;
 }

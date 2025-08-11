@@ -3,6 +3,7 @@
 #include "algorithms/bubble.h"
 #include "algorithms/selection.h"
 #include "algorithms/insertion.h"
+#include "algorithms/merge.h"
 
 int main(void) {
     int arr1[] = {64, 34, 25, 12, 22, 11, 90};
@@ -25,6 +26,13 @@ int main(void) {
     print_array(arr3, n3);
     insertion_sort(arr3, n3);
     print_array(arr3, n3);
+
+    int arr4[] = {64, 34, 25, 12, 22, 11, 90};
+    size_t n4 = sizeof(arr4) / sizeof(arr4[0]);
+    printf("\nMerge sort:\n");
+    print_array(arr4, n4);
+    merge_sort(arr4, n4);
+    print_array(arr4, n4);
 
     return 0;
 }

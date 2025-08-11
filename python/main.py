@@ -2,6 +2,11 @@ from util import print_array
 from algorithms.bubble import bubble_sort
 from algorithms.selection import selection_sort
 from algorithms.insertion import insertion_sort
+from algorithms.merge import merge_sort
+
+def merge_sort_adapter(arr):
+    if arr:
+        merge_sort(arr, 0, len(arr) - 1)
 
 def run_sort(name, func):
     arr = [64, 34, 25, 12, 22, 11, 90]
@@ -15,3 +20,4 @@ if __name__ == "__main__":
     run_sort("Bubble", bubble_sort)
     run_sort("Selection", selection_sort)
     run_sort("Insertion", insertion_sort)
+    run_sort("Merge", merge_sort_adapter)
