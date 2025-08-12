@@ -4,6 +4,28 @@ This repository gathers the implementations of these algorithms in three program
 
 ---
 
+## Running Tests
+From the project root: 
+
+**C**
+```bash
+gcc -std=c11 -Wall -Wextra -O2 -I c -I c/algorithms tests/test_sorts.c c/util.c c/algorithms/bubble.c c/algorithms/selection.c c/algorithms/insertion.c c/algorithms/merge.c c/algorithms/quick.c -o test_c_sorts.exe
+.\test_c_sorts.exe
+```
+
+**C++**
+```bash
+g++ -std=c++17 -Wall -Wextra -O2 -I cpp tests/test_sorts.cpp cpp/util.cpp cpp/algorithms/*.cpp -o test_cpp_sorts.exe
+.\test_cpp_sorts.exe
+```
+
+**Python**
+```bash
+python -m pytest tests/test_sorts.py -q
+```
+
+---
+
 ## Algorithms
 
 ### 1. Bubble Sort
@@ -54,6 +76,18 @@ Average: O(n log n)
 Worst: O(n log n)
 **Space Complexity:** O(n) (due to temporary arrays for merging)
 The time complexity is O(n log n) in all cases because the array is repeatedly divided into halves (log n splits) and each merge operation takes O(n) time.
+
+---
+
+### 5. Quick Sort
+**How it works:** Picks a pivot and partitions the array so that elements ≤ pivot are on the left and > pivot on the right, then recursively sorts the partitions.
+
+**Time Complexity:**  
+- Best: O(n log n)  
+- Average: O(n log n)  
+- Worst: O(n²) (e.g., already sorted with bad pivot choice)  
+**Space Complexity:** O(log n) (recursion stack)  
+*Fast in practice with good pivot choices; here we use the classic Lomuto partition for clarity.*
 
 ---
 

@@ -4,6 +4,7 @@
 #include "algorithms/selection.h"
 #include "algorithms/insertion.h"
 #include "algorithms/merge.h"
+#include "algorithms/quick.h"
 
 int main(void) {
     int arr1[] = {64, 34, 25, 12, 22, 11, 90};
@@ -33,6 +34,13 @@ int main(void) {
     print_array(arr4, n4);
     merge_sort(arr4, n4);
     print_array(arr4, n4);
+
+    int arr5[] = {64, 34, 25, 12, 22, 11, 90};
+    size_t n5 = sizeof(arr5) / sizeof(arr5[0]);
+    printf("\nMerge sort:\n");
+    print_array(arr5, n5);
+    quick(arr5, n5);
+    print_array(arr5, n5);
 
     return 0;
 }

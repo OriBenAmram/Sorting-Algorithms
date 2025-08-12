@@ -3,6 +3,7 @@ from algorithms.bubble import bubble_sort
 from algorithms.selection import selection_sort
 from algorithms.insertion import insertion_sort
 from algorithms.merge import merge_sort
+from algorithms.quick import quick_sort
 
 def merge_sort_adapter(arr):
     if arr:
@@ -21,3 +22,4 @@ if __name__ == "__main__":
     run_sort("Selection", selection_sort)
     run_sort("Insertion", insertion_sort)
     run_sort("Merge", merge_sort_adapter)
+    run_sort("Quick", quick_sort)

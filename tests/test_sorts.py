@@ -1,15 +1,18 @@
 import pytest
-from python.algorithms.bubble import bubble_sort
-from python.algorithms.selection import selection_sort
-from python.algorithms.insertion import insertion_sort
-from python.algorithms.merge import merge_sort
+from algorithms.bubble import bubble_sort
+from algorithms.selection import selection_sort
+from algorithms.insertion import insertion_sort
+from algorithms.merge import merge_sort
+from algorithms.quick import quick_sort
+
 
 def merge_sort_adapter(arr):
     if arr:
         merge_sort(arr, 0, len(arr) - 1)
 
+
 @pytest.mark.parametrize("sort_func", [
-    bubble_sort, selection_sort, insertion_sort, merge_sort_adapter
+    bubble_sort, selection_sort, insertion_sort, merge_sort_adapter, quick_sort
 ])
 @pytest.mark.parametrize("data, expected", [
     ([], []),
