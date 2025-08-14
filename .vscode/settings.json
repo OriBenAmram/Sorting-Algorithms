@@ -45,6 +45,7 @@
         "stdexcept": "cpp",
         "streambuf": "cpp",
         "typeinfo": "cpp",
-        "merge.h": "c"
+        "merge.h": "c",
+        "heap.h": "c"
     }
 }

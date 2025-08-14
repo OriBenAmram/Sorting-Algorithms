@@ -6,6 +6,7 @@
 #include "algorithms/insertion.hpp"
 #include "algorithms/merge.hpp"
 #include "algorithms/quick.hpp"
+#include "algorithms/heap.hpp"
 
 int main() {
     std::vector<int> a1 = {64, 34, 25, 12, 22, 11, 90};
@@ -37,6 +38,12 @@ int main() {
     print_array(a5);
     quick_sort(a5);
     print_array(a5);
+
+    std::vector<int> a6 = {64, 34, 25, 12, 22, 11, 90};
+    std::cout << "\nHeap sort:\n";
+    print_array(a6);
+    heap_sort(a6);
+    print_array(a6);
 
     return 0;
 }

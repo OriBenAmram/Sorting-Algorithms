@@ -6,6 +6,7 @@
 #include "../c/algorithms/insertion.h"
 #include "../c/algorithms/merge.h"
 #include "../c/algorithms/quick.h"
+#include "../c/algorithms/heap.h"
 
 static void run_all(void (*sort)(int*, size_t)) {
     int a0[] = {};
@@ -32,5 +33,6 @@ int main(void) {
     run_all(insertion_sort);
     run_all(merge_sort);
     run_all(quick_sort);
+    run_all(heap_sort);
     return 0;
 }

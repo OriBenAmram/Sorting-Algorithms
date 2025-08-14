@@ -1,6 +1,8 @@
 # Sorting Algorithms in C, C++, and Python
 
-This repository gathers the implementations of these algorithms in three programming languages — **C**, **C++**, and **Python** — both for practice and to provide a resource for anyone preparing for relevant exams or interviews. Good luck!
+This repository gathers the implementations of these algorithms in three programming languages — **C**, **C++**, and **Python** — both for practice and to provide a resource for anyone preparing for relevant exams or interviews. 
+
+The README is structured in three main parts: first, a **[Running Commands](#running-tests)** section that explains how to compile and execute the tests for each language; second, detailed **[Algorithm Explanations](#algorithms)** including time and space complexities; and finally, a **[Notes and Concepts](#noteworthy-commands--concepts)** section covering additional commands and programming techniques that were not part of my formal coursework, included so classmates, fellow students, and other readers can fully understand the code.
 
 ---
 
@@ -9,14 +11,22 @@ From the project root:
 
 **C**
 ```bash
-gcc -std=c11 -Wall -Wextra -O2 -I c -I c/algorithms tests/test_sorts.c c/util.c c/algorithms/bubble.c c/algorithms/selection.c c/algorithms/insertion.c c/algorithms/merge.c c/algorithms/quick.c -o test_c_sorts.exe
+gcc -std=c11 -Wall -Wextra -O2 -I c -I c/algorithms `
+  tests/test_sorts.c c/util.c c/algorithms/*.c `
+  -o test_c_sorts.exe
+
 .\test_c_sorts.exe
+
 ```
 
 **C++**
 ```bash
-g++ -std=c++17 -Wall -Wextra -O2 -I cpp tests/test_sorts.cpp cpp/util.cpp cpp/algorithms/*.cpp -o test_cpp_sorts.exe
+g++ -std=c++17 -Wall -Wextra -O2 -I cpp -I cpp/algorithms `
+  tests/test_sorts.cpp cpp/util.cpp cpp/algorithms/*.cpp `
+  -o test_cpp_sorts.exe
+
 .\test_cpp_sorts.exe
+
 ```
 
 **Python**
@@ -88,6 +98,18 @@ The time complexity is O(n log n) in all cases because the array is repeatedly d
 - Worst: O(n²) (e.g., already sorted with bad pivot choice)  
 **Space Complexity:** O(log n) (recursion stack)  
 *Fast in practice with good pivot choices; here we use the classic Lomuto partition for clarity.*
+
+---
+
+### 6. Heap Sort
+**How it works:** Builds a **max-heap** from the array (a complete binary tree where each parent is greater than or equal to its children). Once the heap is built, repeatedly swaps the root (maximum) with the last element in the unsorted portion, reduces the heap size by one, and restores the heap property by sifting down the new root.  
+
+**Time Complexity:**  
+- Best: O(n log n)  
+- Average: O(n log n)  
+- Worst: O(n log n)  
+**Space Complexity:** O(1)  
+*Runs in O(n log n) in all cases because building the heap takes O(n) and each of the n−1 extractions takes O(log n). It is an in-place algorithm but not stable.*
 
 ---
 

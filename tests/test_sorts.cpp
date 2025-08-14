@@ -5,6 +5,7 @@
 #include "../cpp/algorithms/insertion.hpp"
 #include "../cpp/algorithms/merge.hpp"
 #include "../cpp/algorithms/quick.hpp"
+#include "../cpp/algorithms/heap.hpp"
 
 using SortFn = void(*)(std::vector<int>&);
 
@@ -37,4 +38,5 @@ int main() {
     run_all(insertion_sort);
     run_all(merge_sort);
     run_all(quick_sort);
+    run_all(heap_sort);
 }

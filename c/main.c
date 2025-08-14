@@ -5,6 +5,7 @@
 #include "algorithms/insertion.h"
 #include "algorithms/merge.h"
 #include "algorithms/quick.h"
+#include "algorithms/heap.h"
 
 int main(void) {
     int arr1[] = {64, 34, 25, 12, 22, 11, 90};
@@ -37,10 +38,17 @@ int main(void) {
 
     int arr5[] = {64, 34, 25, 12, 22, 11, 90};
     size_t n5 = sizeof(arr5) / sizeof(arr5[0]);
-    printf("\nMerge sort:\n");
+    printf("\nQuick sort:\n");
     print_array(arr5, n5);
     quick(arr5, n5);
     print_array(arr5, n5);
+
+    int arr6[] = {64, 34, 25, 12, 22, 11, 90};
+    size_t n6 = sizeof(arr6) / sizeof(arr6[0]);
+    printf("\nHeap sort:\n");
+    print_array(arr6, n6);
+    heap(arr6, n6);
+    print_array(arr6, n6);
 
     return 0;
 }
