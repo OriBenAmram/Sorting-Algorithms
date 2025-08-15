@@ -7,6 +7,9 @@
 #include "../c/algorithms/merge.h"
 #include "../c/algorithms/quick.h"
 #include "../c/algorithms/heap.h"
+#include "../c/algorithms/counting.h"
+#include "../c/algorithms/radix.h"
+
 
 static void run_all(void (*sort)(int*, size_t)) {
     int a0[] = {};
@@ -34,5 +37,8 @@ int main(void) {
     run_all(merge_sort);
     run_all(quick_sort);
     run_all(heap_sort);
+    run_all(counting_sort);
+    run_all(radix_sort);
+    // Bucket sort uses double* for uniform-distribution float sorting, so it's excluded from the int-based test harness.
     return 0;
 }

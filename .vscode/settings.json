@@ -46,6 +46,7 @@
         "streambuf": "cpp",
         "typeinfo": "cpp",
         "merge.h": "c",
-        "heap.h": "c"
+        "heap.h": "c",
+        "bucket.h": "c"
     }
 }

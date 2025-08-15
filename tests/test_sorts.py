@@ -5,7 +5,9 @@ from algorithms.insertion import insertion_sort
 from algorithms.merge import merge_sort
 from algorithms.quick import quick_sort
 from algorithms.heap import heap_sort
-
+from algorithms.counting import counting_sort
+from algorithms.radix import radix_sort
+from algorithms.bucket import bucket_sort
 
 def merge_sort_adapter(arr):
     if arr:
@@ -13,7 +15,7 @@ def merge_sort_adapter(arr):
 
 
 @pytest.mark.parametrize("sort_func", [
-    bubble_sort, selection_sort, insertion_sort, merge_sort_adapter, quick_sort, heap_sort
+    bubble_sort, selection_sort, insertion_sort, merge_sort_adapter, quick_sort, heap_sort, counting_sort, radix_sort, bucket_sort
 ])
 @pytest.mark.parametrize("data, expected", [
     ([], []),

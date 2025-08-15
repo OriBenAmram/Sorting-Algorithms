@@ -5,6 +5,9 @@ from algorithms.insertion import insertion_sort
 from algorithms.merge import merge_sort
 from algorithms.quick import quick_sort
 from algorithms.heap import heap_sort
+from algorithms.counting import counting_sort
+from algorithms.radix import radix_sort  
+from algorithms.bucket import bucket_sort
 
 def merge_sort_adapter(arr):
     if arr:
@@ -25,3 +28,6 @@ if __name__ == "__main__":
     run_sort("Merge", merge_sort_adapter)
     run_sort("Quick", quick_sort)
     run_sort("Heap", heap_sort)
+    run_sort("Counting", counting_sort)
+    run_sort("Radix", radix_sort)
+    run_sort("Bucket", bucket_sort)

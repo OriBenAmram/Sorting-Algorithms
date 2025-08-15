@@ -6,6 +6,9 @@
 #include "algorithms/merge.h"
 #include "algorithms/quick.h"
 #include "algorithms/heap.h"
+#include "algorithms/counting.h"
+#include "algorithms/radix.h"
+#include "algorithms/bucket.h"
 
 int main(void) {
     int arr1[] = {64, 34, 25, 12, 22, 11, 90};
@@ -49,6 +52,30 @@ int main(void) {
     print_array(arr6, n6);
     heap(arr6, n6);
     print_array(arr6, n6);
+
+     int arr7[] = {5, -3, 7, 0, -3, 5, 2};
+    size_t n7 = sizeof(arr7) / sizeof(arr7[0]);
+    printf("\nCounting sort:\n");
+    print_array(arr7, n7);
+    counting_sort(arr7, n7);
+    print_array(arr7, n7);
+
+    int arr8[] = {170, 45, 75, -90, -802, 24, 2, 66};
+    size_t n8 = sizeof(arr8) / sizeof(arr8[0]);
+    printf("\nRadix sort:\n");
+    print_array(arr8, n8);
+    radix_sort(arr8, n8);
+    print_array(arr8, n8);
+
+    double arr9[] = {0.78, 0.17, 0.39, 0.26, 0.72, 0.94, 0.21, 0.12, 0.23, 0.68};
+    size_t n9 = sizeof(arr9) / sizeof(arr9[0]);
+    printf("\nBucket sort:\n");
+    // Need a separate print for doubles
+    for (size_t i = 0; i < n9; i++) printf("%.2f ", arr9[i]);
+    printf("\n");
+    bucket_sort(arr9, n9);
+    for (size_t i = 0; i < n9; i++) printf("%.2f ", arr9[i]);
+    printf("\n");
 
     return 0;
 }

@@ -7,6 +7,9 @@
 #include "algorithms/merge.hpp"
 #include "algorithms/quick.hpp"
 #include "algorithms/heap.hpp"
+#include "algorithms/counting.hpp"
+#include "algorithms/radix.hpp"
+#include "algorithms/bucket.hpp"
 
 int main() {
     std::vector<int> a1 = {64, 34, 25, 12, 22, 11, 90};
@@ -44,6 +47,27 @@ int main() {
     print_array(a6);
     heap_sort(a6);
     print_array(a6);
+
+    
+    std::vector<int> a7 = {5, -3, 7, 0, -3, 5, 2};
+    std::cout << "\nCounting sort:\n";
+    print_array(a7);
+    counting_sort(a7);
+    print_array(a7);
+
+    std::vector<int> a8 = {170, 45, 75, -90, -802, 24, 2, 66};
+    std::cout << "\nRadix sort:\n";
+    print_array(a8);
+    radix_sort(a8);
+    print_array(a8);
+
+    std::vector<double> a9 = {0.78, 0.17, 0.39, 0.26, 0.72, 0.94, 0.21, 0.12, 0.23, 0.68};
+    std::cout << "\nBucket sort:\n";
+    for (double x : a9) std::cout << x << " ";
+    std::cout << "\n";
+    bucket_sort(a9);
+    for (double x : a9) std::cout << x << " ";
+    std::cout << "\n";
 
     return 0;
 }
